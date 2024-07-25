@@ -4,13 +4,17 @@ const PORT = 8000
 
 
 const rapper = {
-  '21 savage': {  'age': 29,
+  '21 savage': {  'age': 31,
     'birthName': 'London Bloke',
     'birthLocation': 'Da UK'
   },
-  'chance the rapper': {  'age': 29,
-    'birthName': 'chiraq nucca',
+  'chance the rapper': {  'age': 31,
+    'birthName': 'Chancelor Johnathan Bennett',
     'birthLocation': 'the Chi'
+  },
+  'unknown': {  'age': 0,
+    'birthName': 'unknown',
+    'birthLocation': 'unknown'
   }
 }
 
@@ -28,7 +32,7 @@ app.get('/api/:rapperName',(req,res) => {
     if(rapper[rapperName]) {
         res.json(rapper[rapperName])
     } else{
-        res.json('noooooo')
+        res.json(rapper['unknown'])
     }
 })
 
