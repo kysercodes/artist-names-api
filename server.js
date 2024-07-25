@@ -4,7 +4,7 @@ const PORT = 8000
 const cors = require('cors');
 
 
-app.use(cors)
+app.use(cors())
 
 
 const rapper = {
